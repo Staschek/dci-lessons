@@ -1,0 +1,11 @@
+a[target]{
+    color:red;
+}
+
+.togglebox:checked{
+    outline: 1px solid red;
+}
+
+.togglebox:not(:checked) + div{
+    display: none;
+}

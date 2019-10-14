@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.pagehead{
+    color: red;
+    background: rgb(103, 103, 104);
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    /* writing-mode: vertical-rl; */
+    font-size: 5vw;
+    height: 90vh;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    /* position: relative;
+    left: -70px;
+    top: -100px;
+    width: 110vw;
+    transform: rotate(-12deg) */
+    /* margin: auto; */
+}
+
+.pagehead + p{
+    text-align: justify;
+    text-indent: 50px;
+    letter-spacing: 3px;
+    word-spacing: 100px;
+    line-height: 30px;
+
+}
+.pagehead + p + p{
+    direction: rtl;
+    font-size:  50px;
+    color: rgb(255, 193, 35);
+    text-shadow: 15px 15px 8px black;
+}

@@ -1,0 +1,27 @@
+.father{
+    position: relative;
+    background-color: black;
+    height: 400px;
+    width: 98%;
+}
+
+.child{
+    position: relative;
+    background-color: cornflowerblue;
+    height: 50px;
+    width: 50px;
+    left: calc(50% - 25px); 
+    top: calc(50% - 25px);    
+}
+
+.subDiv{
+    position: relative;
+    background-color: blueviolet;
+    height: 25px;
+    width: 25px;
+    margin: auto;
+    border-radius: 4px;
+    top:12px;
+
+    transform: rotate(45deg)
+}

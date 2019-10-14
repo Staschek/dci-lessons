@@ -1,0 +1,33 @@
+.frontClass, .backClass{
+    font-size: 3rem;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    backface-visibility: hidden;
+    transition-property: transform;
+    transition-duration: 1.5s; 
+    color: white;
+    line-height: 160px;
+}
+.backClass{
+    background-color: violet;
+    transform: rotateY(180deg);
+}
+
+.frontClass{    
+    background-color: blue;
+}
+
+.hoverClass:hover>.frontClass{    
+    transform: rotateY(180deg);
+}
+    
+.hoverClass:hover>.backClass{    
+    transform: rotateY(360deg);
+    }
+
+.hoverClass{
+    z-index: 9999;
+    perspective: 360;
+}
