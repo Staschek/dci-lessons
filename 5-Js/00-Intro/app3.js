@@ -42,6 +42,11 @@ let y = 1200;
 let a, b;
 a = x;
 console.log(a);
-
-x.name = 'Saf1';
-console.log(a)
+// x.name = 'Saf1';
+// console.log(a)
+// a.name = 'Safwan';
+// console.log(x)
+b = y;
+console.log(b)
+y = 1000;
+console.log(b)
