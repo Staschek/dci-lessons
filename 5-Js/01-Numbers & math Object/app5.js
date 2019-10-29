@@ -28,4 +28,4 @@ val = Math.max(2,55,35,15,36,125,145,1,54,-54);        // Bigest Number
 val = Math.random();        // Random number from 0-1
 val = Math.floor(Math.random() * 20 + 1);        // Random number from 0-20
 
-console.log(val)
+//console.log(val)
