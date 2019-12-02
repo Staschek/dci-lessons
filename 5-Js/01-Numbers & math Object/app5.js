@@ -28,4 +28,35 @@ val = Math.max(2,55,35,15,36,125,145,1,54,-54);        // Bigest Number
 val = Math.random();        // Random number from 0-1
 val = Math.floor(Math.random() * 20 + 1);        // Random number from 0-20
 
-//console.log(val)
+
+const firstName = "Sascha"
+const lastName = "Wollin"
+
+val = "Nelson";
+val += " Wollin"
+
+//Escaping
+val = 'That\'s awesome, I can\'t wait';
+
+//Length
+
+val = firstName.length
+
+//Concat()
+val = firstName.concat(' ', lastName);
+
+//Change Case
+val = firstName.toLowerCase();
+val = lastName.toUpperCase();
+
+val = lastName[2];
+
+//indecof()
+val =firstName.indexOf('a');
+val =firstName.lastIndexOf('a');
+
+//charAt()
+val = firstName.charAt(4)//.toUpperCase();  für weitere 
+val = firstName[4];
+
+console.log(val)

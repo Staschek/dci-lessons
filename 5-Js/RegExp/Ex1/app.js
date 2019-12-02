@@ -1,14 +1,14 @@
 let re;
 re =/hello/;
-re =/hello  /i; //i = case insensitive
-// re=/hello/g; //g = Global search
+re =/hello/i; //i = case insensitive
+re= /hello/g; //g = Global search
 
 
- console.log(re);
+// console.log(re);
 // console.log(re.source); // the string is the source
 
 // 1 - exec() - return result in an array or null
-// const result = re.exec(` world will say hello to every creature`);
+// const result = re.exec(`hello world will say hello to every hello creature`);
 // console.log(result) 
 // console.log(result[0]) //return the matched pattern 'hello'
 // console.log(result.index) //return the index of the pattern inside the input
@@ -39,11 +39,10 @@ re =/hello  /i; //i = case insensitive
 // console.log(checkExp(str,re))
 
 
-// 4 - search() - Return index of the first match,
-//                  if not found, it returns -1
-// const str = ' There and hello everyone else hello';
-// const result = str.search(re);
-// console.log(result) // return the index of the pattern
+// 4 - search() - Return index of the first match, if not found, it returns -1
+const str = ' There and hello everyone else hello';
+const result = str.search(re);
+console.log(result) // return the index of the pattern
 
 
 // 5 - replace() - Exicise Function:
