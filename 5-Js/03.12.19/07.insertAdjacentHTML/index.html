@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML DOM insertAdjacentHTML() Method</title>
+</head>
+<body>
+    <h1>HTML DOM insertAdjacentHTML() Method</h1>
+    <!-- element.insertAdjacentHTML(position, text); 
+    text : A DOMString representing the element
+    Position :  beforebegin
+                <p>
+                afterbegin
+                --- foo ---
+                beforeend
+                </p>
+                afterend
+    -->
+    <p>This method insert a specified text as HTML, into a specified position in the document</p>
+
+    <h2 id="myH2">My Header</h2>
+    <p>When u click on this button, a paragraph will appear according to the position of the Header</p>
+    <button id="try0">Insert the paragraph 'beforebegin' myH2</button>
+    <button id="try1">Insert the paragraph 'afterbegin' myH2</button>
+    <button id="try2">Insert the paragraph 'beforeend' myH2</button>
+    <button id="try3">Insert the paragraph 'afterend' myH2</button>
+
+
+
+    <h3 >What is 42 * 42?</h3>
+    <button id="result">Result</button>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
