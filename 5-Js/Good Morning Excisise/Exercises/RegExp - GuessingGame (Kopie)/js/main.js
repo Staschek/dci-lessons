@@ -58,9 +58,7 @@ function showResult(param) {
 }
 
 function getWord(e) {
-    console.log('e' , regExLetter.test(e.target.value))
-   //S if (e.keyCode == 13 ) {
-    if (e.target.value.match(regExLetter) ) {
+    if (e.keyCode == 13 ) {
         Game(e.target.value)
     }else{
         console.log('This is not a valid Letter')
@@ -71,25 +69,3 @@ function getWord(e) {
 //BEGIN CODING AFTER THIS----------
 
 
-function startGame() {
-    let ranNum = Math.floor(Math.random() * Math.floor(GameData.arrayWords.length)); //random Number for choosing the Word
-    let tempArr = [];              //Array with the actual Letters of the word
-    GameData.word = GameData.arrayWords[ranNum];
-    for (letters in GameData.word){
-        tempArr.push(GameData.word[letters])
-        //console.log(tempArr);
-        GameData.arrayOfLetters.push('\_')      //pushing blank '\_' for each letter
-    }
-    showWord()
-}
-
-function Game(input) {
-    console.log('console: ',(txtField.value).match(regExLetter))
-    console.log('Input: ' + input)
-    
-}
-
-
-
-
-startGame()
