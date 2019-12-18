@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  
+    <title>Task List</title>
+    <style>
+    
+/* label focus color */
+ .input-field input:focus + label {
+   color: #ffab40 !important;
+ }
+ /* label underline focus color */
+ .input-field input:focus input[type="submit"]:focus {
+    color: #ffab40 !important;
+   border-bottom: 1px solid #ffab40 !important;
+   box-shadow: 0 1px 0 0 #ffab40 !important
+ }
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row"></div>
+            <div class="col s10"></div>
+                <div class="card blue-grey darken-1" id="main">
+                    <div class="card-content white-text">
+                        <span class="card-title">Task List</span>
+                        <div class="row">
+                            <form id="task-form">
+                                <div class="input-field col s12">
+                                    <input type="text" name="task" id="task">
+                                    <label for="task">What are you going to do?</label>
+                                </div>
+                                <input type="submit" value="Add Task" class="btn orange accent-2">                            
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-action white-text">
+                        <span class="card-title ">Tasks</span>
+                        <div class="input-field col s12">
+                            <input type="text" name="fTask" id="fTask">
+                            <label for="fTask">Filter Task</label>    
+                        </div>
+                        <ul class="collection  black-text blue-grey darken-1">
+                        </ul>
+                            <button id="clear" class="btn black waves-effect waves-light">Clear All</button>     
+                    </div>
+                </div>
+    </div>
+    
+
+    <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="app.js"></script>
+      
+</body>
+</html>

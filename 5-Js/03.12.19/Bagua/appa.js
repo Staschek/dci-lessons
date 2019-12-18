@@ -49,54 +49,58 @@ function  enter(e){
 
 const table = document.getElementById('bagua-table');
 let editingTd = null;
-table.addEventListener('click', function(event){
+table.onclick =  function(event){
     //3 possible targets
-    let target = event.target.closest('.edit-cancel, .edit-ok, td')
-    if(!table.contains(target)) {return}
+   // console.log(event.target)
+ //    this.onkeydown = console.log(event.key)
+
+    let target = event.target.closest('.edit-cancel,.edit-ok,td')
+    if(!table.contains(target)) return;
+
         if(target.className == 'edit-cancel'){
-                target.onkeydown = function(event) {
-            if (event.key == 'Enter') {
-                finishTdEdit(target, editingTd.data)
-            }
-        };
+                //target.onkeydown = function(event) {
+                finishTdEdit(false, editingTd.elem)
+       // };
 
         }else if(target.className == 'edit-ok'){
-            target.onkeydown = function(event) {
-                if (event.key == 'Enter') {
-                    finishTdEdit(target, editingTd.data)
-                }
-            };        
+            
+                    finishTdEdit(true, editingTd.elem)
+                
+                  
     }else if (target.nodeName == 'TD'){
+        if (editingTd) return; // already editing
             makeTdEditable(target)    
     }
-})
+};
 
-//E
-function finishTdEdit(target, td, isOK){
-    console.log(td)
-    if(target.className == 'edit-ok'){
+//Event
+function finishTdEdit(target, td){
+    //console.log(td, target)
+    if(target){
         td.innerHTML = td.firstChild.value
-    }else if(target.className == 'edit-cancel'){
+    }else{
         td.innerHTML = editingTd.data 
     }
+    td.classList.remove('edit-td');
+    editingTd = null;
 }
 
 //Event Handler:currently the real event target is the td
 function makeTdEditable(td){
     //let td = event.target
-    let textArea = document.createElement('textarea')
-
+    
     editingTd = {
         elem: td,
         data: td.innerHTML
-    }
+    };
     //td is in edit state, CSS also styles the area inside
     td.classList.add('edit-td')
+    let textArea = document.createElement('textarea')
 
     textArea.style.width = td.clientWidth + 'px';
     textArea.style.height = td.clientHeight + 'px';
     textArea.className = 'edit-area';
-    textArea.value = editingTd.data;
+    textArea.value = td.innerHTML;
     td.innerHTML = '';
     td.appendChild(textArea)
     textArea.focus();
