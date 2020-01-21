@@ -1,0 +1,20 @@
+.mainCont1{
+	z-index: 5;
+padding: 10px;
+border: solid 1px grey; 
+position: relative; 
+background-color: red;
+}
+.mainCont2{
+	border-radius: 15px;
+	z-index:20; 
+margin-top: 10px;
+color: rgb(253, 28, 28);
+padding: 10px;
+width: 50vw; 
+height: 30vh;
+background-color: rgb(146, 228, 253); 
+position: absolute; 
+top: 50vh; 
+left: 70px; 
+}

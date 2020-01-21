@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>IT WORKS Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Style/main.css" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+      width: 1000px;
+      height: 500px;
+      background-color: blueviolet;
+      background-image: linear-gradient(rgb(111, 171, 221), rgb(190, 220, 248));
+    }
+
+    .blurText {
+      z-index: 2;
+      width: 500px;
+      height: 500px;
+      LEFT: 50%;
+      position: absolute;
+      -webkit-animation: cloud 15s;
+      /* Safari 4.0 - 8.0 */
+      animation: cloud 15s;
+    }
+
+    .mvngCloud {
+
+      z-index: -1;
+      /* background-color: brown;*/
+      position: absolute;
+      -webkit-animation: moveCld 85s infinite;
+      /* Safari 4.0 - 8.0 */
+      animation: moveCld 85s infinite;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes cloud {
+      0% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 135px rgba(255, 255, 255, 0);
+      }
+
+      10% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 75px rgba(255, 255, 255, 0.288);
+      }
+
+      30% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 35px rgba(38, 102, 145, 0.541);
+      }
+
+      55% {
+        color: rgba(105, 105, 105, 0.158);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+      }
+
+      100% {
+        color: rgb(0, 0, 0);
+        text-shadow: 0 0 0px black;
+      }
+    }
+
+    /* Standard syntax */
+    @keyframes cloud {
+      0% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 135px rgba(255, 255, 255, 0);
+      }
+
+      10% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 75px rgba(255, 255, 255, 0.288);
+      }
+
+      30% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 0 0 35px rgba(38, 102, 145, 0.541);
+      }
+
+      55% {
+        color: rgba(105, 105, 105, 0.158);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+      }
+
+      100% {
+        color: rgb(0, 0, 0);
+        text-shadow: 0 0 0px black;
+      }
+    }
+
+    @keyframes moveCld {
+      0% {
+        left: -20%;
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 1;
+      }
+
+      95% {
+        opacity: 1;
+      }
+
+      100% {
+        left: 70%;
+        opacity: 0;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body style="">
+
+
+  <div class="mvngCloud" style="top: 50px;">
+    <p style="color: rgba(0, 0, 0, 0); 
+            text-shadow: 0 0 150px rgb(255, 255, 255);
+            text-shadow: 0 0 100px rgb(255, 255, 255);
+            text-shadow: 0 0 80px rgb(255, 255, 255);
+            text-shadow: 0 0 50px rgb(255, 255, 255);
+            top: 0px;  font-size: 800%; 
+            ">oOOo*o</p>
+  </div>
+
+  <p class="mvngCloud" style="animation-delay: 3ms; color: rgba(0, 0, 0, 0); top: 50px;  
+text-shadow: 0 0 150px rgb(255, 255, 255);
+text-shadow: 0 0 100px rgb(255, 255, 255);
+text-shadow: 0 0 80px rgb(255, 255, 255);
+text-shadow: 0 0 50px rgb(255, 255, 255);
+font-size: 800%;
+">ooOO .</p>
+
+  <div style=" LEFT: 50% ">
+    <a href="sec1.html" style="text-decoration: none; color: black;">
+      <h1 style="top: 100px; text-align: center; height: 100px; " class="blurText">YEAH! It is cool to see most of you
+        back in the course
+        and there are some other seemingly nice people joining the team.
+        Have fun everybody, we will have a great time!<br>
+        (asking you to sing KUMBAYA would be a little too much, right?)
+        <br><br>Click text to go on</h1>
+
+    </a>
+
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin:0;
+}
+.container{z-index: 1;
+
+  position: relative;
+    width: 100vw;
+    height: 100vh;
+  /* background-image: url("../assets/curve4.png");*/
+    background-size: 100%;
+
+    background-image: linear-gradient(rgb(0, 32, 27), rgb(0, 62, 39),rgb(0, 113, 82),rgb(0, 113, 82)
+    ,rgb(0, 113, 82),rgb(0, 131, 57));
+}
+
+
+.move1{
+  
+/*position data*/
+z-index: 10;
+position: absolute;
+width: 15vw;
+height: 45vh;
+bottom: 20vh;
+left: 46vw;
+}
+
+.move1 div:first-child{
+  /*the look*/
+  padding: 20px;
+  color: rgba(128, 128, 128, 0.541);
+  text-shadow:-1px -1px 1px rgb(0, 0, 0), 1px 1px 1px rgb(255, 255, 255) ;
+  text-align: center;
+  border: 0px solid red;
+ border-radius: 10px;
+ outline: thick ridge grey;
+outline-offset: 3px;   
+/*background-color: rgb(255, 230, 0);*/
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+.move2{
+/*position data*/
+z-index: 3;
+position: absolute;
+width: 15vw;
+height: 45vh;
+bottom: 20vh;
+left: 26vw;
+}
+.move2 div:first-child{
+  /*the look*/
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border: 0px solid red;
+ border-radius: 10px;
+ outline: thick ridge grey;
+outline-offset: 3px;   
+/*background-color: rgb(255, 230, 0);*/
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+
+.move3{
+  
+  /*position data*/
+z-index: 3;
+position: absolute;
+width: 15vw;
+height: 45vh;
+bottom: 20vh;
+left: 66vw;
+  }
+.move3 div:first-child{
+   /*the look*/
+   padding: 20px;
+   color: white;
+   text-align: center;
+   border: 0px solid red;
+  border-radius: 10px;
+  outline: thick ridge grey;
+outline-offset: 3px;   
+/*background-color: rgb(255, 230, 0);*/
+background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 36, 29), rgb(0, 62, 39));
+}
+
+.shadowbox{/*z-index: 3;*/
+ text-align: center;
+pointer-events: none;
+bottom: 30vh;
+height: 5vh;
+/*box-shadow: 0px 30px 30px rgb(0, 0, 0);*/
+color: rgba(0, 0, 255, 0);
+text-shadow: 0px 30px 20px rgb(0, 0, 0);
+text-shadow: 0px 30px 35px rgb(0, 0, 0);
+text-shadow: 0px 30px 40px rgb(0, 0, 0);
+text-shadow: 0px 30px 45px rgb(0, 0, 0);
+
+}
+/*this div works as a controlbutton (hover over key)*/
+.directionL{ 
+    position: absolute;
+    bottom: 20vh;
+    left: 46vw;
+    
+    width: 10vw;
+    height: 10vh;
+    background-image: url("../assets/arrow1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+   
+
+  

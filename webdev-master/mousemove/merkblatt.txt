@@ -1,0 +1,14 @@
+html
+pre tag
+tabIndex        : indicates which element is set first, when pressing tab. it can be used to make the element clickable
+position
+
+js 
+offsetWidth/height
+
+#ID : focus
+
+getBoundingClientRect().left/.top/ gives back the dimensions of the text
+
+
+only an element that is in focus
