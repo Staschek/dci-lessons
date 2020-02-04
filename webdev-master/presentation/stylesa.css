@@ -1,6 +1,0 @@
-p {animation: texttoleft 10s infinite;}
-
-@keyframe texttoleft{
-   0% {right: 100%;}
-    100% {right: 0%;}
-}

@@ -1,22 +1,32 @@
 //Get Elements from DOM
 const cal = document.querySelectorAll('button')
 const inp = document.getElementsByClassName('calculator-screen')
-inp.value  = 0
+//inp.value  = 0
+
+console.table(cal, inp)
 
 
 
 
-const firstValue = 22
-const secondValue = 22
 
-function calculate(o){
-    return function (fValue, sValue) { 
-        return fValue + parseFloat(o) + sValue}
-}
+//versucht mit functionalem Programmieren die Taschenrechner Funktion zu bauen. Funtioniert nicht weil operatoren nicht von string convertiert werden können
 
-let plus = calculate(`/u+002B/`)
-let minus = calculate('-')
-let mal = calculate("*")
-let dived = calculate('/')
-let result = mal(22,11)
-console.log(result)
+// function calculate(op){
+//     return function (fValue, sValue) { 
+//         return fValue + op + sValue}
+// }
+
+// let plus = calculate('+')
+// let minus = calculate('-')
+// let mal = calculate("*")
+// let dived = calculate('/')
+// let result = parseInt(minus(12,32))
+// console.log(result)
+
+
+// let plus = calculate('+')
+// let minus = calculate('-')
+// let mal = calculate("*")
+// let dived = calculate('/')
+// let result = minus(12,32)
+// console.log(result)

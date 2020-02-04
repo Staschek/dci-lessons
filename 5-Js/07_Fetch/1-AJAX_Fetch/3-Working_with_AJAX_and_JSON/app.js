@@ -37,7 +37,7 @@ function checkValid(e){
     //      //3: processing request
     //      //4: request finished and resonse is ready
     //  }
-     
+     0
      xhr.onreadystatechange = function(){
          console.log('Readystate: ', xhr.readyState)
          //readyState Value
