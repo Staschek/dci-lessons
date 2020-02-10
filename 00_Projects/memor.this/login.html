@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Custom core CSS -->
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" href="style_log.css">
+    <title>memor.khtyr</title>
+</head>
+<body>
+    <div class="container">
+
+  
+      <!-- Modal -->
+      <div class="modal" id="logreg" aria-hidden="true">
+        <a class="btn-floating btn modal-close red"><i class="fas fa-times" style="font-size: 1.3rem;"></i></a>
+    <!--Content-->
+    <div class="modal-content">
+  
+            <!--Modal cascading tabs-->
+            <div class="nav-wrapper">
+
+              <div class="nav-content">
+              
+      
+              <!-- Nav tabs -->
+              <ul class="tabs tabs-transperent">
+                <li class="tab col s6">
+                  <a href="#panel1"><i class="fas fa-user mr-1"></i>
+                    Login</a>
+                </li>
+                <li class="tab col s6">
+                  <a  href="#panel2"><i class="fas fa-user-plus"></i>
+                    Register</a>
+                </li>
+              </ul>
+      
+              <!-- Tab panels -->
+              <div class="tab-content">
+                <form  id='form' >
+                  <!--Panel 1-->
+
+                <div class="col s12 active" id="panel1">
+      
+                  <!--Body-->
+                  <div class="modal-body">
+                    <div class="input-field form-control">
+                      <i class="fas fa-envelope prefix"></i>
+                      <label data-error="wrong" data-success="right" for="email">Your email</label>
+                      <input type="email" id="email" class="form-control validate">
+                      <small>Error message</small>
+                    </div>
+      
+                    <div class="input-field form-control ">
+                      <i class="fas fa-lock prefix"></i>
+                      <label data-error="wrong" data-success="right" for="password">Your password</label>
+                      <input type="password" id="password" class="form-control validate">
+                      <small>Error message</small>
+                    </div>
+                    <div class="center-align">
+                      <button type="submit" class="btn login btn-info" style="margin-top: 12px;">Log in <i class="fas fa-sign-in"></i></button>
+                    </div>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="center-align">
+                      <!-- <p class="col s3">Not a member? <a href="#panel2" class="blue-text">Sign Up</a></p>
+                      <div class="col s3 "> </div> -->
+                      <p class="col s3 right">Forgot <a href="#" class="blue-text">Password?</a></p>
+                    </div>
+                  </div>
+      
+                </div>
+                <!--/.Panel 1-->
+      
+                <!--Panel 2-->
+                <div class="col s12" id="panel2">
+      
+                  <!--Body-->
+                  <div class="modal-body" >
+                    <div class="input-field form-control">
+                      <i class="fas fa-envelope prefix"></i>
+                      <label data-error="wrong" data-success="right" for="email1">Your email</label>
+                      <input type="email" id="email1" class="form-control validate">
+                      <small>Error message</small>
+                    </div>
+      
+                    <div class="input-field form-control">
+                      <i class="fas fa-lock prefix"></i>
+                      <label data-error="wrong" data-success="right" for="password1">Your password</label>
+                      <input type="password" id="password1" class="form-control validate">
+                      <small>Error message</small>
+                    </div>
+      
+                    <div class="input-field form-control">
+                      <i class="fas fa-lock prefix"></i>
+                      <label data-error="wrong" data-success="right" for="password2">Repeat password</label>
+                      <input type="password" id="password2" class="form-control validate">
+                      <small>Error message</small>
+                    </div>
+      
+                    <div class="center-align form-control">
+                      <button type="submit" class="btn btn-info signup">Sign up <i class="fas fa-sign-in"></i></button>
+                    </div>
+      
+                  </div>
+                  <!--Footer-->
+                  <!-- <div class="modal-footer">
+                    <div class="options left">
+                      <p class="pt-1">Already have an account? <a href="#panel1" class="blue-text">Log In</a></p>
+                    </div>
+                  </div> -->
+                </div>
+                <!--/.Panel 2-->
+                </form>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+          <!--/.Content-->
+  </div>
+
+ 
+  <h6 style="position: relative;left:5px;">Remember everthing!</h6>
+  <h1 class="display-4">memor.khtyr</h1>
+    <!-- Button trigger modal -->
+    <a href="#logreg" class="btn btn-info modal-trigger">
+        Login / Register
+    </a>
+    </div>
+
+
+
+
+    <!-- Javascript -->
+
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="./assets/materialize-src/js/bin/materialize.js"></script>
+            
+    <script src="easyHTTP2.js"></script>
+    <script src="form-valid.js"></script>
+    <script src="data.js"></script>
+    <script src="modal.js"></script>
+
+</body>
+</html>
