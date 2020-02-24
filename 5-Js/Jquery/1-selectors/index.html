@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery | Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: Helvetica, Arial, sans-serif;
+            background: #e7e7e7;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            padding:10px;
+            margin:auto;
+        }
+        input[type=submit]{
+            color:crimson;
+        }
+
+    </style>
+    <script>
+/*        $(document).ready(function(){
+            $('#btn1').click(function(){
+                alert('Button 1 is  clicked !!!')
+            })
+        })
+        */
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="display-4">jQuery | Selectors</h1>
+        <div id="coords"></div>
+    </header>
+    <div class="container">
+        <h3>Mouse Events</h3>
+        <button id='btn1'>Button 1</button>
+        <button id='btn2'>Button 2</button>
+        <button id='btn3'>Button 3</button>
+        <button id='btn4'>Button 4</button>
+        <button id='btn5'>Button 5</button>
+        <button id='btn6' class="Du kannst mich mal!">Button 6</button>
+        <hr>
+
+        <div id="res"></div>
+        <form id="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <label for="gender">Gender</label>
+            <select type="text" name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">FeMale</option>
+            </select>
+            <input type="button" value="Button-1">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+    
+    
+        <h1 id="heading1">Heading One</h1>
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Repellat recusandae pariatur ipsa sed repudiandae suscipit?</span>  Fugiat ipsam quis ut aut, omnis autem possimus. Sunt quod qui asperiores! Dicta, vero error!</p>
+        <h1 class="heading2">Heading One</h1>
+        <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Repellat recusandae pariatur ipsa sed repudiandae suscipit?</span>  Fugiat ipsam quis ut aut, omnis autem possimus. Sunt quod qui asperiores! Dicta, vero error!</p>
+    </div>
+
+    <ul id="list">
+        <li>List Items</li>
+        <li>List Items</li>
+        <li>List Items</li>
+        <li> <a href="http://google.com">Google</a></li>
+        <li><a href="http://myspace.com">Yahoo</a></li>
+        <li>List Items</li>
+        <li>List Items</li>
+        <li>List Items</li>
+        <li>List Items</li>
+        <li>List Items</li>
+    </ul>
+
+
+    <input type="text">
+
+   
+    
+
+    <script>
+        //JQuery
+        //$('h1').hide();
+        //$('h1#heading1').hide();
+        //$('.heading2').hide();
+
+        $('span').css('color','orange')
+        $('#para1>span').css('color','red')
+
+        $('ul#list li:first').css('color','green')
+        $('ul#list li:last').css('color','blue')
+        $('ul#list li:even').css('background-color','grey')
+        $('ul#list li:odd').css('background-color','lightgrey')
+        $('ul#list li:nth-child(4n').css('background-color','#f3a6fe')
+        
+        //$(':text').hide();
+        $('[href]').css('color', 'crimson')
+        $('a[href="http://myspace.com"]').css('color', 'green')
+
+
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                alert('Button 1 is  clicked !!!')
+            })
+
+            $('#btn2').on('click', function(){
+                // $('#para1').hide()
+                $('#para1').toggle()
+            })
+
+            $('#btn3').on('dblclick', function(){
+                // $('#para1').hide()
+                $('#btn1').toggle()
+            })
+
+            $('#btn4').hover(function(){
+                // $('#para1').hide()
+                $('#para1').toggle()
+            })
+
+                //// MOuse enter / mouseleave nicht ganz exact wenn der buton sich verschiebt. Hover ist zuverlässiger
+            $('#btn5').on('mouseenter', function(){
+                // $('#para1').hide()
+                $('#para1').toggle()
+            })
+
+            $('#btn5').on('mouseleave', function(){
+                // $('#para1').hide()
+                $('#para1').toggle()
+            })
+
+            $('#btn6').click(function(e){
+                alert(e.currentTarget.id)
+                alert(e.target.innerHTML)
+                alert(e.target.outerHTML)
+                alert(e.target.className)
+            })
+
+            $(document).on('mousemove', e=>{
+                $('#coords').html('Coords: Y: '+ e.clientY + ' X: ' + e.clientX)
+            })
+
+            $('input').focus(function(){
+                $(this).css('background', '#fcf')
+            })
+            $('input').blur(function(){
+                $(this).css('background', '')
+            })
+            $('input').keydown((e)=>{
+                $('#res').html(`You Type the letter: ${e.target.value}`)
+            })
+            $('select#gender').change((e)=>{
+                $('#res').html(`You selected: ${e.target.value}`)
+            })
+            $('#form').submit(e=>{
+                e.preventDefault();
+                let name = $('#name').val();
+                let email = $('#email').val();
+                $('#res').html(`You Name : ${name} and ur Email is:  ${email}`)
+
+            })
+
+        })
+
+
+    </script>
+</body>
+</html>
