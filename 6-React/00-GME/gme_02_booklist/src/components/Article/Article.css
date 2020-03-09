@@ -1,0 +1,20 @@
+.Article {
+    padding: 20px;
+    flex: 1 50%;
+}
+
+.Article input {
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid #444;
+    border-radius: 3px;
+}
+
+.title {
+    height: 21vh;
+    border: lightcoral 2em dotted;
+    border-radius: 1em;
+    margin: 2em;
+    padding: 2em;
+    background-color: #eee;
+}

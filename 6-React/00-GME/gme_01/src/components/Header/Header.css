@@ -1,0 +1,9 @@
+.Header {
+    color: #eee;
+    margin-top: 3rem;
+    height: 20vh;
+    align-items: center;
+    border: 3px solid #20d2f4;
+    /* box-shadow: 0 0 1px #92edff, 0 0 2px #92edff, 0 0 6px #92edff, 0 0 12px #92edff, inset 0 0 1px #92edff, inset 0 0 2px #92edff, inset 0 0 6px #92edff, inset 0 0 12px #92edff; */
+
+}
