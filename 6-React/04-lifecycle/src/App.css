@@ -1,0 +1,47 @@
+body {
+  background-color: #282c34;
+  color: white;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 30px auto;
+  border: 2px solid #999;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+​.list {
+  list-style: none;
+}
+
+.list li {
+  color: #282c34;
+  padding: 10px 20px;
+  background: #b5d1ff;
+  margin: 1px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h1 {
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+.btn {
+  padding: 10px 20px;
+  background: orange;
+  margin: 10px auto;
+  font-size: 20px;
+  display: block;
+}
