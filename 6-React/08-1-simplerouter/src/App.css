@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  background-color: #282c34;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.body {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --mainColor: rgb(255, 180, 0);
+}
+
+#root a {
+  background: linear-gradient(to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent 5px);
+  background-repeat: repeat-x;
+  background-size: 100%;
+  color: #ccc;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+#root a:hover {
+  background: linear-gradient(to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent);
+}

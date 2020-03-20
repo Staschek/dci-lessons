@@ -6,7 +6,9 @@ import Article from './components/Article/Article';
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>{/* <Article /> */}</header>
+      <header className='App-header'>
+        <Article />
+      </header>
     </div>
   );
 }

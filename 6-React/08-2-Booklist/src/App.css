@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  padding-top: 1em;
+  justify-content: space-between;
+  border-bottom: lightslategrey 1px solid;
+}
+
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  color: orange
+}
+
+.main {
+  padding: 1em;
+}
+
+input[type=submit] {
+  color: white;
+  margin-top: .5em;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+  color: white;
+}
+
+input[type=submit]:hover {
+  border-color: orange;
+}
+
+.success {
+  color: forestgreen;
+}
+
+.error {
+  color: indianred;
+}
+
+.success,
+.error {
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
