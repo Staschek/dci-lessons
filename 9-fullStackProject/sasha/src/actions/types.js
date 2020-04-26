@@ -1,0 +1,13 @@
+export const SUBMIT_FORM = 'SUBMIT_FORM';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_ALERT = 'SET_ALERT';
+export const SET_ALERTBOOL = 'SET_ALERTBOOL';
+export const SET_TEXT = 'SET_TEXT';
+export const RESET_STEPS = 'RESET_STEPS';
+export const SET_FIRSTNAME = 'SET_FIRSTNAME';
+export const SET_LASTNAME = 'SET_LASTNAME';
+export const SET_EMAIL = 'SET_EMAIL';
+export const SET_OCCUPATION = 'SET_OCCUPATION';
+export const SET_CITY = 'SET_CITY';
+export const SET_BIO = 'SET_BIO';
+export const SET_PHONE = 'SET_PHONE';
