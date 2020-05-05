@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const styles = {
-  button: {
-    background: 'black',
-  },
-};
 export default function AppBar() {
   return (
-    <div className={styles}>
+    <div>
       <nav className='navbar navbar-expand navbar-dark bg-dark'>
         <button
           className='navbar-toggler'
@@ -37,6 +32,12 @@ export default function AppBar() {
               <Link to='/about' className='nav-link'>
                 {' '}
                 About
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/test' className='nav-link'>
+                {' '}
+                Test
               </Link>
             </li>
           </ul>

@@ -9,12 +9,14 @@ router.get('/get-review', async (req, res) => {
 });
 
 router.post('/new-review', async (req, res) => {
-  let { title, rating, comment } = req.body;
+  let { title, rating, comment, movieTitle, movieId } = req.body;
 
   let newReview = new MovieReviews({
-    title: title,
+    title,
     rating: parseInt(rating),
-    comment: comment,
+    comment,
+    movieTitle,
+    movieId,
   });
 
   newReview
@@ -32,15 +34,17 @@ router.post('/new-review', async (req, res) => {
 //Put is not working yet
 
 router.put('/update-review', async (req, res) => {
-  let { title, rating, comment, id } = req.body;
+  let { title, rating, comment, id, movieTitle, movieId } = req.body;
 
-  let updateReview = new MovieReviews({
+  let newData = {
     title,
     rating: parseInt(rating),
     comment,
-  });
+    movieTitle,
+    movieId,
+  };
 
-  MovieReviews.findByIdAndUpdate(id)
+  MovieReviews.findByIdAndUpdate(id, newData)
     .save()
     .then((response) => {
       console.log(response);
@@ -64,6 +68,13 @@ router.delete('/delete-review', (req, res) => {
       console.log(error);
       res.send({ msg: error });
     });
+});
+
+router.get('/get-reviews-movie', async (req, res) => {
+  let movieId_req = req.query.movieId;
+
+  let reviews = await MovieReviews.find({ movieId: movieId_req });
+  res.send(reviews);
 });
 
 module.exports = router;

@@ -17,6 +17,14 @@ const MovieReviewsSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  movieTitle: {
+    type: String,
+    required: true,
+  },
+  movieId: {
+    type: String,
+    required: true,
+  },
 });
 
 const MovieReviews = mongoose.model('MovieReviews', MovieReviewsSchema);

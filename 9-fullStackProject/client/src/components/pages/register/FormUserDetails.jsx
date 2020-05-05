@@ -1,58 +1,99 @@
-import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import React, { useState } from 'react';
+import { Form, Col, Button, InputGroup } from 'react-bootstrap';
 
-class FormUserDetails extends Component {
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
+const FormUserDetails = (props) => {
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
   };
-
-  render() {
-    const { values, handleChange } = this.props;
-    return (
-      <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title='Enter User Details' />
-          <TextField
-            hintText='Enter Your First Name' //placeHolder
-            floatingLabelText='First Name' // label
-            onChange={handleChange('firstName')}
-            defaultValue={values.firstName}
+  return (
+    <>
+      <h4>Register to learn anything!</h4>
+      <br />
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form.Row>
+          <Form.Group as={Col} md='6' controlId='validationCustomUsername'>
+            <Form.Label>Username</Form.Label>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id='inputGroupPrepend'>@</InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control
+                type='text'
+                placeholder='Username'
+                aria-describedby='inputGroupPrepend'
+                required
+              />
+              <Form.Control.Feedback type='invalid'>
+                Please choose a username.
+              </Form.Control.Feedback>
+            </InputGroup>
+          </Form.Group>
+          <Form.Group as={Col} md='6' controlId='validationCustom01'>
+            <Form.Label>Password</Form.Label>
+            <Form.Control required type='password' placeholder='Password' />
+            <Form.Control.Feedback>Password</Form.Control.Feedback>
+          </Form.Group>
+        </Form.Row>
+        <Form.Row>
+          <Form.Group as={Col} md='6' controlId='validationCustom01'>
+            <Form.Label>First name</Form.Label>
+            <Form.Control required type='text' placeholder='First name' />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md='6' controlId='validationCustom02'>
+            <Form.Label>Last name</Form.Label>
+            <Form.Control required type='text' placeholder='Last name' />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          </Form.Group>
+        </Form.Row>
+        <Form.Row>
+          <Form.Group as={Col} md='6' controlId='validationCustom03'>
+            <Form.Label>City</Form.Label>
+            <Form.Control type='text' placeholder='City' required />
+            <Form.Control.Feedback type='invalid'>
+              Please provide a valid city.
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md='3' controlId='validationCustom04'>
+            <Form.Label>State</Form.Label>
+            <Form.Control type='text' placeholder='State' required />
+            <Form.Control.Feedback type='invalid'>
+              Please provide a valid state.
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md='3' controlId='validationCustom05'>
+            <Form.Label>Zip</Form.Label>
+            <Form.Control type='text' placeholder='Zip' required />
+            <Form.Control.Feedback type='invalid'>
+              Please provide a valid zip.
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Form.Row>
+        <Form.Group>
+          <Form.Check
+            required
+            label='Agree to terms and conditions'
+            feedback='You must agree before submitting.'
           />
-          <br />
-          <TextField
-            hintText='Enter Your Last Name' //placeHolder
-            floatingLabelText='Last Name' // label
-            onChange={handleChange('lastName')}
-            defaultValue={values.lastName}
-          />
-          <br />
-          <TextField
-            hintText='Enter Your Email' //placeHolder
-            floatingLabelText='Email' // label
-            onChange={handleChange('email')}
-            defaultValue={values.email}
-          />
-          <br />
-          <RaisedButton
-            label='Continue'
-            color='primary'
-            style={style.button}
-            onClick={this.continue}
-          />
-        </React.Fragment>
-      </MuiThemeProvider>
-    );
-  }
-}
-
-const style = {
-  button: {
-    margin: 15
-  }
+        </Form.Group>
+        <Button type='submit'>Submit form</Button>
+      </Form>
+    </>
+  );
 };
+
+// const style = {
+//   button: {
+//     margin: 15
+//   }
+// };
 
 export default FormUserDetails;
